@@ -13,12 +13,12 @@ My next idea was to just sell it on and get myself a small PC like I originally 
 
 This brought me to now.
 As I'm sure you're all aware, the energy prices are shooting up everywhere, it's a madness! 
-The server I was currently using at my home (16c 32t, 32GB RAM, 2ish tb of raw storage) chews through electricity like it doesn't matter at all- at idle pulling nearly 100 watts and a lot more than that under load.
+The server I was currently using at my home (16c 32t, 32GB RAM, 2ish TB of raw storage) chews through electricity like it doesn't matter at all, pulling nearly 100 watts at idle and a lot more than that under load.
 
-Lately I've only really been using it as a jellyfin server though- which it is certainly overkill for- that's where this idea came from. I can replace my Raspberry Pi Zero First Generation (yikes) and my server with this PC - which only pulls 15 watts under full load!
+Lately, I've only really been using it as a jellyfin server though- which it is certainly overkill for- that's where this idea came from. I can replace my Raspberry Pi Zero First Generation (yikes) and my server with this PC - which only pulls 15 watts under full load!
 
-However that VGA problem was still very prominent.
-I did some research and stumbled across [FAI](https://fai-project.org/FAIme/) - Build your own customised ISO! This was perfect for me as it allowed me to automate the install and enabel SSH etc, like everything I need! I entered the info I wanted, tested it in a VM and it shot straight up in the VM!
+However, the VGA problem was still very prominent.
+I did some research and stumbled across [FAI](https://fai-project.org/FAIme/) - Build your own customised ISO! This was perfect for me as it allowed me to automate the install and enable SSH etc, like everything I need! I entered the info I wanted, tested it in a VM and it shot straight up in the VM!
 
 This seemed perfect- I threw it in the PC and I waited... and waited... and waited. Nothing.
 
@@ -34,13 +34,13 @@ After a lot of googling and stack overflowing, I found an [official guide from U
 
 Perfect!
 
-Or so I thought. It doesn't go into detail of how to do it outside of KVM - I don't want to run it in KVM so this didn't work fro me either.
+Or so I thought. It doesn't go into detail regarding how to do it outside of KVM - I don't want to run it in KVM so this didn't work for me either.
 
-So queue another while of stackoverflow searching- I stumbled across [this](https://www.pugetsystems.com/labs/hpc/How-To-Make-Ubuntu-Autoinstall-ISO-with-Cloud-init-2213/)!
+So queue another while of StackOverflow searching- I stumbled across [this](https://www.pugetsystems.com/labs/hpc/How-To-Make-Ubuntu-Autoinstall-ISO-with-Cloud-init-2213/)!
 
 I downloaded the Ubuntu 20.04 Server ISO from my collection [screenshot](https://i.imgur.com/thP72NK.png)
 
-For the prerequisites, I just had to install `cloud-init`, which I did with the command `sudo apt-get intall cloud-init`.
+For the prerequisites, I just had to install `cloud-init`, which I did with the command `sudo apt-get install cloud-init`.
 
 Now, we must do the user-data and meta-data files.
 meta-data is simple. It's just an empty file!

@@ -5,7 +5,28 @@
     <link>https://blog.ryanwiecz.co.uk/</link>
     <description>Recent content on Ryan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Aug 2022 11:33:39 +0100</lastBuildDate><atom:link href="https://blog.ryanwiecz.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 15:14:39 +0000</lastBuildDate><atom:link href="https://blog.ryanwiecz.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starting my home network anew.</title>
+      <link>https://blog.ryanwiecz.co.uk/posts/redoing-home-network/</link>
+      <pubDate>Wed, 21 Dec 2022 15:14:39 +0000</pubDate>
+      
+      <guid>https://blog.ryanwiecz.co.uk/posts/redoing-home-network/</guid>
+      <description>This is the story of how this blog came to be!
+I previously ran a blog which works very similarly to this one, you write up your blog in MD and then it renders as HTML. This site works exactly the same way however, it is a hell of a lot faster at doing so!
+I&amp;rsquo;m using a framework called Hugo and you can get the source code of this blog over here.</description>
+    </item>
+    
+    <item>
+      <title>Installing Ubuntu... over SSH?</title>
+      <link>https://blog.ryanwiecz.co.uk/posts/ssh-ubuntu-install/</link>
+      <pubDate>Sat, 03 Sep 2022 11:45:39 +0100</pubDate>
+      
+      <guid>https://blog.ryanwiecz.co.uk/posts/ssh-ubuntu-install/</guid>
+      <description>I recently purchased a little shitbox PC off of Facebook Marketplace for just £50!
+It comes with an older i3 (2c 4t) and 8GB of RAM. My initial plan was just to throw arch on it and have it as a portable Arch machine I can remote into from my laptop- this didn&amp;rsquo;t work out though as it was a lot larger than I thought (I thought it was one of those very very small ones 😂)</description>
+    </item>
+    
     <item>
       <title>Making of this Blog!</title>
       <link>https://blog.ryanwiecz.co.uk/posts/making-of-blog/</link>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Installing Ubuntu... over SSH? // Ryan&#39;s Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ryan Wiecz" />
+    <meta name="description" content="Deploying my new Jellyfin and general services server!" />
+    <link rel="stylesheet" href="https://blog.ryanwiecz.co.uk/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installing Ubuntu... over SSH?"/>
+<meta name="twitter:description" content="Deploying my new Jellyfin and general services server!"/>
+
+    <meta property="og:title" content="Installing Ubuntu... over SSH?" />
+<meta property="og:description" content="Deploying my new Jellyfin and general services server!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.ryanwiecz.co.uk/posts/ssh-ubuntu-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-03T11:45:39+01:00" />
+<meta property="article:modified_time" content="2022-09-03T11:45:39+01:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://blog.ryanwiecz.co.uk"><img class="app-header-avatar" src="/images/avatar.png" alt="Ryan Wiecz" /></a>
+      <h1>Ryan&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/itsnotrin" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Installing Ubuntu... over SSH?</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 3, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>I recently purchased a little shitbox PC off of Facebook Marketplace for just £50!</p>
+<p>It comes with an older i3 (2c 4t) and 8GB of RAM. My initial plan was just to throw arch on it and have it as a portable Arch machine I can remote into from my laptop- this didn&rsquo;t work out though as it was a lot larger than I thought (I thought it was one of those very very small ones 😂)</p>
+<p>My next idea was to just sell it on and get myself a small PC like I originally intended. This wouldn&rsquo;t work out either as the PC is VGA only (it has USB 3 though??) and I don&rsquo;t have a VGA cable.</p>
+<p>This brought me to now.
+As I&rsquo;m sure you&rsquo;re all aware, the energy prices are shooting up everywhere, it&rsquo;s a madness!
+The server I was currently using at my home (16c 32t, 32GB RAM, 2ish TB of raw storage) chews through electricity like it doesn&rsquo;t matter at all, pulling nearly 100 watts at idle and a lot more than that under load.</p>
+<p>Lately, I&rsquo;ve only really been using it as a jellyfin server though- which it is certainly overkill for- that&rsquo;s where this idea came from. I can replace my Raspberry Pi Zero First Generation (yikes) and my server with this PC - which only pulls 15 watts under full load!</p>
+<p>However, the VGA problem was still very prominent.
+I did some research and stumbled across <a href="https://fai-project.org/FAIme/">FAI</a> - Build your own customised ISO! This was perfect for me as it allowed me to automate the install and enable SSH etc, like everything I need! I entered the info I wanted, tested it in a VM and it shot straight up in the VM!</p>
+<p>This seemed perfect- I threw it in the PC and I waited&hellip; and waited&hellip; and waited. Nothing.</p>
+<p>Reboot, nothing. It refused to boot and I couldn&rsquo;t plug into a monitor to see the issue.</p>
+<p>This annoyed me a lot so I took a little break- now we&rsquo;re onto today :)</p>
+<p>Another option I stumbled across was <a href="https://zameermanji.com/blog/2021/9/9/installing-ubuntu-20-04-over-ssh/">this blog from 2021</a>. They too had tried other methods and gotten annoyed however they posted something I&rsquo;m certain is going to work- nocloud cloud-init. You provide the username and password you&rsquo;d like to use and you can SSH into the installer from another PC.</p>
+<p>I gave this a try and entirely wrote it out in this blog- just for it to not work. What a waste of my time!</p>
+<p>After a lot of googling and stack overflowing, I found an <a href="https://ubuntu.com/server/docs/install/autoinstall-quickstart">official guide from Ubuntu themselves</a>!</p>
+<p>Perfect!</p>
+<p>Or so I thought. It doesn&rsquo;t go into detail regarding how to do it outside of KVM - I don&rsquo;t want to run it in KVM so this didn&rsquo;t work for me either.</p>
+<p>So queue another while of StackOverflow searching- I stumbled across <a href="https://www.pugetsystems.com/labs/hpc/How-To-Make-Ubuntu-Autoinstall-ISO-with-Cloud-init-2213/">this</a>!</p>
+<p>I downloaded the Ubuntu 20.04 Server ISO from my collection <a href="https://i.imgur.com/thP72NK.png">screenshot</a></p>
+<p>For the prerequisites, I just had to install <code>cloud-init</code>, which I did with the command <code>sudo apt-get install cloud-init</code>.</p>
+<p>Now, we must do the user-data and meta-data files.
+meta-data is simple. It&rsquo;s just an empty file!
+For user-data however, we must add some information.</p>
+<pre tabindex="0"><code>#cloud-config
+chpasswd:
+    expire: false
+    list:
+        - installer:$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0
+</code></pre><p>The crypted password is just <code>ubuntu</code></p>
+<p>Now, we use <a href="https://github.com/covertsh/ubuntu-autoinstall-generator">this handy script from GitHub</a> in order to build the ISO</p>
+<p>We run the command <code>./ubuntu-autoinstall-generator.sh -a -u user-data -d test.iso -s ubuntu-server_20.04.iso -k</code></p>
+<p>Out of this, you get an ISO!</p>
+<p>I threw it in a VM, got the IP from my router&rsquo;s DHCP reservations, SSHd in with the username installer and password <code>ubuntu</code> and it worked!
+<a href="https://i.imgur.com/O42gJk7.png">image</a></p>
+<p>Finally!</p>
+<p>Now&hellip; to throw it in the PC.
+Booted straight up and I&rsquo;ve now configured the PC- now to set it up!</p>
+<p>I may post a blog regarding setting it up (Nginx Proxy Manager, Migrating Old Jellyfin etc etc) so keep an eye out!</p>
+<p>Keep cool :)</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -17,7 +17,7 @@ paginate = 8
 [params]
   author = "Ryan Wiecz"
   description = "An avid young developer, aspiring to always be his best."
-  avatar = "/images/avatar.png"
+  avatar = "https://yip.su/1yapK4.gif"
   menu_item_separator = " - "
   [[params.social]]
     icon = "github"

@@ -1,6 +1,6 @@
 ---
 title: "[Part 1- Setup] - New ArchLinux Workstation!"
-date: 2023-01-28T19:32:39+01:00
+date: 2023-01-29T1133:39+01:00
 description: "It's that time again! Time to say 'screw you' Microsoft!"
 draft: false
 ---

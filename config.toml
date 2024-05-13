@@ -33,12 +33,12 @@ paginate = 8
   #  primaryColor = "#57cc8a"
 
   # Green theme
-  [params.style]
-    darkestColor = "#315659"
-    darkColor = "#253031"
-    lightColor = "#96a879"
-    lightestColor = "#fff"
-    primaryColor = "#dad865"
+#[params.style]
+#   darkestColor = "#315659"
+#   darkColor = "#253031"
+#   lightColor = "#96a879"
+#   lightestColor = "#fff"
+#   primaryColor = "#dad865"
 
   # Red theme
   #[params.style]
@@ -47,3 +47,12 @@ paginate = 8
     #lightColor = "#d6d6d6"
     #lightestColor = "#d3d3d3"
     #primaryColor = "#ffffff"
+
+  # Purple Theme
+ [params.style]
+  darkestColor = "#3d2952"
+  darkColor = "#4e0a63"
+  lightColor = "#ecf0f1"
+  lightestColor = "#ffffff"
+  primaryColor = "#9b59b6"
+

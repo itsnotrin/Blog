@@ -2,7 +2,11 @@
 title = "About"
 +++
 
-I'm a 15 year old, living in the UK and currently in Year 11.
+I'm a 17 year old, living in the UK and currently in Year 12.
+
+Pronouns: He/Him
+
+Sexuality: Bi ![Bi Flag](/images/bi-flag.png) 
 
 I take interest in a lot of things such as:
 - Programming

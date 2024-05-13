@@ -18,4 +18,8 @@ I take interest in a lot of things such as:
 
 This blog is the home to a lot of my thoughts regarding these topics in particular but I'll probably also drift off quite often too.
 
+Contact me on:
+* Discord: mrr1n 
+* Twitter (Not X smh): mrrin123
+
 Thank you for stopping by :3

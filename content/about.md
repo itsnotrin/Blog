@@ -12,7 +12,7 @@ Sexuality: Bi
 
 I take interest in a lot of things such as:
 - Programming
-- Virtualization
+- Virtualisation
 - Self Hosting
 - Privacy
 
@@ -21,5 +21,9 @@ This blog is the home to a lot of my thoughts regarding these topics in particul
 Contact me on:
 * Discord: mrr1n 
 * Twitter (Not X smh): mrrin123
+
+### Other info:
+
+There are analytics on this site but obviously not Google Analytics. I self host [Plausible](https://plausible.io) for this. For transparency's sake, you can see the data [here](https://analytics.ryanwiecz.co.uk/blog.ryanwiecz.co.uk/)
 
 Thank you for stopping by :3

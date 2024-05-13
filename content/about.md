@@ -6,7 +6,9 @@ I'm a 17 year old, living in the UK and currently in Year 12.
 
 Pronouns: He/Him
 
-Sexuality: Bi ![Bi Flag](/images/bi-flag.png) 
+Sexuality: Bi
+
+![Bi Flag](/images/biflag.webp) 
 
 I take interest in a lot of things such as:
 - Programming
@@ -14,6 +16,6 @@ I take interest in a lot of things such as:
 - Self Hosting
 - Privacy
 
-This blog is the home to a lot of my thoughts regarding these topics in particular!
+This blog is the home to a lot of my thoughts regarding these topics in particular but I'll probably also drift off quite often too.
 
-Thank you for stopping by :)
+Thank you for stopping by :3

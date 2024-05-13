@@ -1,5 +1,8 @@
 {{ define "main" }}
-  <article>
+<head>
+<script defer data-domain="blog.ryanwiecz.co.uk" src="http://analytics.ryanwiecz.co.uk/js/script.js"></script>
+</head>
+<article>
     <h1>{{ .Title }}</h1>
     <ul class="posts-list">
       {{ range where .Paginator.Pages "Type" "!=" "page" }}

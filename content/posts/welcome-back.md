@@ -4,7 +4,7 @@ date: 2024-05-14T13:38:39+00:00
 description: "It's been a while since I posted, here's why."
 draft: false
 ---
-Hi :3,
+# Hi :3,
 I really don't know where to begin with this or even how to phrase anything- it's been a long long time (almost 2 years now). 
 
 I know that no-one really followed this regardless but it still felt like a place I could talk about anything judgement free.

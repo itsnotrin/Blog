@@ -10,7 +10,7 @@ Another reason I opted for Hugo is becuase I'm trying to better my GO knowledge,
 
 ## How to install Hugo
 
-### From Binaries (Reccomended)
+### From Binaries (Recommended)
 
 [Click here for the newest binary](https://github.com/gohugoio/hugo/releases)
 

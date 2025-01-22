@@ -5,9 +5,6 @@ description: "When does it all end?"
 draft: false
 ---
 
-> [!WARNING]
-> Sad Themes, Depression.
-
 First off, hey, it's been a while.
 Every now and then I check the analytics if I'm bored and I remember that people still read the stuff I post sometimes, other times a friend'll reach out to me and ask what's happening with the blog.
 Honestly, I don't know. I either don't have time or I don't have ideas or I don't know if it's worth putting what I think out.

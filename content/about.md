@@ -2,13 +2,13 @@
 title = "About"
 +++
 
-I'm a 17 year old, living in the UK and currently in Year 12.
+I'm a 18 year old, living in the UK and currently in Year 13.
 
 Pronouns: He/Him
 
 Sexuality: Bi
 
-![Bi Flag](/images/biflag.webp) 
+![Bi Flag](/images/biflag.webp)
 
 I take interest in a lot of things such as:
 - Programming
@@ -19,7 +19,7 @@ I take interest in a lot of things such as:
 This blog is the home to a lot of my thoughts regarding these topics in particular but I'll probably also drift off quite often too.
 
 Contact me on:
-* Discord: mrr1n 
+* Discord: mrr1n
 * Twitter (Not X smh): mrrin123
 
 ### Other info:
